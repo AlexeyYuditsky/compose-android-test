@@ -4,44 +4,54 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAbsoluteAlignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.alexeyyuditsky.learning.ui.theme.ComposeandroidtestTheme
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
-            ComposeandroidtestTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        setContent { HelloWorld() }
     }
+
 }
 
+@Preview(
+    showSystemUi = true,
+)
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+fun HelloWorld() = Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+    Column(
+        modifier = Modifier.fillMaxSize().padding(innerPadding),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceBetween
+    ) {
+        Text(
+            modifier = Modifier.background(Color.Blue).align(Alignment.End).weight(2f),
+            text = "Hello",
+            fontSize = 25.sp,
+            color = Color.Red
+        )
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComposeandroidtestTheme {
-        Greeting("Android")
+        Text(
+            modifier = Modifier.background(Color.Blue).weight(2f),
+            text = "World",
+            fontSize = 25.sp,
+            color = Color.Green
+        )
     }
 }
