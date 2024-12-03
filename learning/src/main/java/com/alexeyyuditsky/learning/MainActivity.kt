@@ -23,9 +23,10 @@ class MainActivity : ComponentActivity() {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 Box(modifier = Modifier.padding(innerPadding)) {
                     var counter by rememberSaveable { mutableStateOf(Counter(0)) }
-                    StatefulCounter(counter = counter.value, incrementedValue = { value ->
-                        counter = counter.copy(value = value + 1)
-                    })
+                    StatefulCounter(
+                        counter = counter.value,
+                        incrementedValue = { value -> counter = counter.copy(value = value) }
+                    )
                 }
             }
         }
