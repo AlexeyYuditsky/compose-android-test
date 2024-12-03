@@ -5,7 +5,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.RememberObserver
 import androidx.compose.runtime.remember
 
-
 @Composable
 fun logCompositionLifecycle(name: String): Any = remember {
     LifecycleRememberObserver(name)
