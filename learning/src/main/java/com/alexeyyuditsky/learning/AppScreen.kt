@@ -18,6 +18,14 @@ fun AppScreen(modifier: Modifier = Modifier) {
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
+        Container(name = "Buttons example") {
+            ButtonsExample()
+        }
+        Container(name = "Buttons example") {
+            TextFieldExample()
+        }
+        Container(name = "Buttons example") {
+            CheckBoxesExample()
+        }
     }
 }
