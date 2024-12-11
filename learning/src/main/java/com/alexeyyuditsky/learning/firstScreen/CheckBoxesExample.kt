@@ -3,8 +3,14 @@ package com.alexeyyuditsky.learning.firstScreen
 import android.os.Parcelable
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Text
 import androidx.compose.material3.ripple
@@ -15,6 +21,7 @@ import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.parcelize.Parcelize
 
 data class CheckableItem(
@@ -115,4 +122,19 @@ fun CheckBoxesExample(modifier: Modifier = Modifier) {
     Text(
         text = "Selected Items: ${state.selectedItemNames}"
     )
+}
+
+@Preview(showSystemUi = true)
+@Composable
+fun CheckBoxesExamplePreview(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(WindowInsets.systemBars.asPaddingValues()),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Container(name = "CheckBox example") {
+            CheckBoxesExample()
+        }
+    }
 }
