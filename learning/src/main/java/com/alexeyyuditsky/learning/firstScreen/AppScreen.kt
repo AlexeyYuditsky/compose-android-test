@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning
+package com.alexeyyuditsky.learning.firstScreen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize

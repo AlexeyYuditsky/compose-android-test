@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning
+package com.alexeyyuditsky.learning.firstScreen
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,14 +11,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun TextFieldExample(modifier: Modifier = Modifier) {
-    var textValue by rememberSaveable {
-        mutableStateOf("")
-    }
+    var textValue by rememberSaveable { mutableStateOf("") }
     OutlinedTextField(
         modifier = modifier.fillMaxSize(),
         value = textValue,
@@ -29,10 +26,4 @@ fun TextFieldExample(modifier: Modifier = Modifier) {
     )
     Spacer(modifier = modifier.height(6.dp))
     Text(text = textValue.ifBlank { "[empty]" })
-}
-
-@Preview(showSystemUi = true)
-@Composable
-fun TExtFieldExamplePreview() {
-    TextFieldExample()
 }

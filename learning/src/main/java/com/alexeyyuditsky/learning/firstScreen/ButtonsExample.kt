@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning
+package com.alexeyyuditsky.learning.firstScreen
 
 import android.os.Parcelable
 import androidx.compose.foundation.BorderStroke
@@ -14,7 +14,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.parcelize.IgnoredOnParcel
 import kotlinx.parcelize.Parcelize
@@ -22,16 +21,16 @@ import kotlin.random.Random
 
 @Parcelize
 data class ButtonState(
-    val buttonColor: Int = AndroidColor.YELLOW,
+    val buttonColor: Int = android.graphics.Color.YELLOW,
     val pressCount: Int = 0
 ) : Parcelable {
 
     @IgnoredOnParcel
-    val textColor:Int by lazy(LazyThreadSafetyMode.NONE) {
-        if (AndroidColor.luminance(buttonColor) > 0.5) {
-            AndroidColor.BLACK
+    val textColor: Int by lazy(LazyThreadSafetyMode.NONE) {
+        if (android.graphics.Color.luminance(buttonColor) > 0.5) {
+            android.graphics.Color.BLACK
         } else {
-            AndroidColor.WHITE
+            android.graphics.Color.WHITE
         }
     }
 
@@ -60,10 +59,4 @@ fun ButtonsExample(modifier: Modifier = Modifier) {
         Text(text = "Click Me", color = Color(buttonState.textColor))
     }
     Text(text = "Count of clicks: ${buttonState.pressCount}")
-}
-
-@Preview(showSystemUi = true)
-@Composable
-fun ButtonsExamplePreview() {
-    ButtonsExample()
 }
