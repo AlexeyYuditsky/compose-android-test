@@ -1,8 +1,6 @@
 package com.alexeyyuditsky.learning.firstScreen
 
 import android.os.Parcelable
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
@@ -13,7 +11,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Text
-import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -34,10 +31,9 @@ data class CheckBoxesState(
 ) {
     val selectedItemNames: String
         get() {
-            return checkableItems.asSequence()
+            return checkableItems
                 .filter { it.isChecked.value }
-                .map { it.title }
-                .joinToString()
+                .joinToString { it.title }
                 .takeIf { it.isNotEmpty() } ?: "[nothing]"
         }
 
@@ -80,14 +76,11 @@ data class ParcelableCheckBoxesState(
 
 @Composable
 fun CheckBoxesExample(modifier: Modifier = Modifier) {
-    val state = rememberSaveable(
-        saver = CheckBoxesState.Saver
-    ) {
+    val state = rememberSaveable(saver = CheckBoxesState.Saver) {
         CheckBoxesState(
             checkableItems = List(6) { index ->
-                val id = index + 1
                 CheckableItem(
-                    title = "Item $id",
+                    title = "Item ${index + 1}",
                     isChecked = mutableStateOf(false)
                 )
             }
@@ -96,32 +89,18 @@ fun CheckBoxesExample(modifier: Modifier = Modifier) {
 
     state.checkableItems.forEach { checkedItem ->
         Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = modifier
-                .fillMaxWidth()
-                .clickable(
-                    onClick = {
-                        val newCheckValue = !checkedItem.isChecked.value
-                        checkedItem.isChecked.value = newCheckValue
-                    },
-                    interactionSource = MutableInteractionSource(),
-                    indication = ripple()
-                )
+            modifier = modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Checkbox(
                 checked = checkedItem.isChecked.value,
-                onCheckedChange = {
-                    val newCheckValue = !checkedItem.isChecked.value
-                    checkedItem.isChecked.value = newCheckValue
-                },
+                onCheckedChange = { checkedItem.isChecked.value = !checkedItem.isChecked.value }
             )
             Text(text = checkedItem.title)
         }
     }
 
-    Text(
-        text = "Selected Items: ${state.selectedItemNames}"
-    )
+    Text(text = "Selected Items: ${state.selectedItemNames}")
 }
 
 @Preview(showSystemUi = true)
