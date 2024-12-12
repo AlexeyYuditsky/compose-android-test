@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.alexeyyuditsky.learning.buttonCounter.ButtonCounter
 import com.alexeyyuditsky.learning.firstScreen.AppScreen
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 Box(modifier = Modifier.padding(innerPadding)) {
-                    AppScreen()
+                    //AppScreen()
+                    ButtonCounter()
                 }
             }
         }
