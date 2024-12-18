@@ -9,8 +9,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -24,8 +26,13 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ButtonCounter(modifier: Modifier = Modifier) {
-    var state by rememberSaveable { mutableIntStateOf(0) }
-    var offsetState by rememberSaveable { mutableIntStateOf(0) }
+    var countState by rememberSaveable { mutableIntStateOf(0) }
+    val offsetState by remember {
+        derivedStateOf {
+            val newValue = 20 * (countState / 3)
+            newValue
+        }
+    }
 
     Column(
         modifier = modifier.fillMaxSize(),
@@ -33,15 +40,12 @@ fun ButtonCounter(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = state.toString(),
+            text = countState.toString(),
             fontSize = 50.sp
         )
         Button(
             modifier = modifier,
-            onClick = {
-                if (++state % 3 == 0)
-                    offsetState += 20
-            }
+            onClick = { ++countState }
         ) {
             Text(
                 text = "Increment",
