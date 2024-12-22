@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Learning</string>
+    <string name="material_mail_icon">Material mail icon</string>
+    <string name="tinted_vector_icon">Tinted vector icon</string>
+    <string name="vector_icon_with_modifier">Vector icon with modifier</string>
+    <string name="random_architecture_showcase">Random architecture showcase</string>
+    <string name="simple_image">Simple image</string>
+    <string name="image_with_contentscale_crop">Image with contentScale=Crop</string>
 </resources>
