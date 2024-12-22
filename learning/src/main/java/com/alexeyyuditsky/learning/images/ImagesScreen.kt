@@ -12,8 +12,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.alexeyyuditsky.learning.images.bitmap.ClippedImage
 import com.alexeyyuditsky.learning.images.bitmap.ScaleCropImage
 import com.alexeyyuditsky.learning.images.bitmap.SimpleImage
+import com.alexeyyuditsky.learning.images.bitmap.SquareImage
 import com.alexeyyuditsky.learning.images.vector.IconWithModifier
 import com.alexeyyuditsky.learning.images.vector.MaterialIcon
 import com.alexeyyuditsky.learning.images.vector.TintedVectorIcon
@@ -32,6 +34,8 @@ fun ImagesScreen() {
         TintedVectorIcon()
         SimpleImage()
         ScaleCropImage()
+        SquareImage()
+        ClippedImage()
     }
 }
 

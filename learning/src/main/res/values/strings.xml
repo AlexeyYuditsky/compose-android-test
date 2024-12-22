@@ -6,4 +6,6 @@
     <string name="random_architecture_showcase">Random architecture showcase</string>
     <string name="simple_image">Simple image</string>
     <string name="image_with_contentscale_crop">Image with contentScale=Crop</string>
+    <string name="image_cropped_by_aspect_ratio">Image cropped by aspect ratio</string>
+    <string name="clipped_image">Clipped image</string>
 </resources>
