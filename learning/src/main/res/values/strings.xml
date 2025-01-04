@@ -10,4 +10,5 @@
     <string name="clipped_image">Clipped image</string>
     <string name="button_click_async_image">Button click async image</string>
     <string name="load_image">Load image</string>
+    <string name="load_failed">Load Failed</string>
 </resources>

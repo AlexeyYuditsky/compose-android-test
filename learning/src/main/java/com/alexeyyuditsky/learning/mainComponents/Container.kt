@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.firstScreen
+package com.alexeyyuditsky.learning.mainComponents
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column

@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.firstScreen
+package com.alexeyyuditsky.learning.mainComponents
 
 import android.os.Parcelable
 import androidx.compose.foundation.BorderStroke
