@@ -27,6 +27,11 @@ android {
                 "proguard-rules.pro"
             )
         }
+        create("profile") {
+            initWith(getByName("debug"))
+            isDebuggable = false
+            isProfileable = true
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -51,6 +56,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.coil)
     implementation(libs.coilNetwork)
+    implementation(libs.javaFaker)
 
     testImplementation(libs.junit)
 
