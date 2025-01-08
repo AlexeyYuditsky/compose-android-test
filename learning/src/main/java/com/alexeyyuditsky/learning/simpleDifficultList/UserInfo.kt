@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.difficultList
+package com.alexeyyuditsky.learning.simpleDifficultList
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.RowScope
@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun RowScope.UserInfo(
     name: String,
-    text: String,
+    status: String,
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier.weight(1f)) {
@@ -30,7 +30,7 @@ fun RowScope.UserInfo(
         )
         Spacer(modifier = modifier.height(6.dp))
         Text(
-            text = text,
+            text = status,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
             fontSize = 16.sp

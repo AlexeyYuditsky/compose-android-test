@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.difficultList
+package com.alexeyyuditsky.learning.simpleDifficultList
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.icons.Icons

@@ -21,5 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "compose-android-test"
 include(":test")
-include(":airports")
 include(":learning")

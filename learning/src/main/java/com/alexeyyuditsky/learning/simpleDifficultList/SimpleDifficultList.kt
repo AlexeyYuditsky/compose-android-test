@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.difficultList
+package com.alexeyyuditsky.learning.simpleDifficultList
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -49,7 +49,7 @@ fun createUserList(): List<User> {
 }
 
 @Composable
-fun DifficultList() {
+fun SimpleDifficultList() {
     var userList by rememberSaveable { mutableStateOf(createUserList()) }
     val context = LocalContext.current
 
@@ -74,6 +74,6 @@ fun DifficultList() {
 @Composable
 fun DifficultListPreview() {
     Box(modifier = Modifier.padding(WindowInsets.systemBars.asPaddingValues())) {
-        DifficultList()
+        SimpleDifficultList()
     }
 }

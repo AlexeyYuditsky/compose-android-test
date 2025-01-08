@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.difficultList
+package com.alexeyyuditsky.learning.simpleDifficultList
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -44,7 +44,7 @@ fun DifficultItem(
         Row(modifier = modifier.padding(all = 8.dp)) {
             UserImage(image = user.photoUrl)
             Spacer(modifier = modifier.width(16.dp))
-            UserInfo(name = user.name, text = user.text)
+            UserInfo(name = user.name, status = user.text)
             DeleteUserButton(onUserDelete = onUserDelete)
         }
     }
@@ -73,7 +73,7 @@ fun DifficultItemPreview() {
                         .clip(CircleShape)
                 )
                 Spacer(modifier = Modifier.width(16.dp))
-                UserInfo(name = "Alexey", text = "Random text")
+                UserInfo(name = "Alexey", status = "Random text")
                 DeleteUserButton(onUserDelete = {})
             }
         }
