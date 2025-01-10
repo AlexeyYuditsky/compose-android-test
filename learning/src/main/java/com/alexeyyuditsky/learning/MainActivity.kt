@@ -8,8 +8,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
-import com.alexeyyuditsky.learning.singletonDiffrenetList.ui.SingletonUserCardScreen
+import com.alexeyyuditsky.learning.compositionLocalButton.AppTheme
+import com.alexeyyuditsky.learning.compositionLocalButton.CompositionLocalButton
+import com.alexeyyuditsky.learning.compositionLocalButton.LocalAppTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -19,7 +22,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 Box(modifier = Modifier.padding(innerPadding)) {
-                    SingletonUserCardScreen()
+                    CompositionLocalProvider(LocalAppTheme provides AppTheme.Dark) {
+                        CompositionLocalButton()
+                    }
                 }
             }
         }
