@@ -11,4 +11,5 @@
     <string name="button_click_async_image">Button click async image</string>
     <string name="load_image">Load image</string>
     <string name="load_failed">Load Failed</string>
+    <string name="changeAppTheme">Change App Theme</string>
 </resources>
