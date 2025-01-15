@@ -22,6 +22,7 @@ fun AppThemeContainer(content: @Composable () -> Unit) {
     val themeDataSource = remember { ThemeDataSource.Base(context) }
     val appThemeController = remember { AppThemeController.Base(themeDataSource) }
     val theme by themeDataSource.themeStateFlow.collectAsStateWithLifecycle()
+
     CompositionLocalProvider(
         LocalAppTheme provides theme,
         LocalAppThemeController provides appThemeController,

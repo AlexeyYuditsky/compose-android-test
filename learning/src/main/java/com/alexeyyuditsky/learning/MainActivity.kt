@@ -20,9 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 Box(modifier = Modifier.padding(innerPadding)) {
-                    AppThemeContainer {
-                        CompositionLocalTheme()
-                    }
+                    AppThemeContainer { CompositionLocalTheme() }
                 }
             }
         }
