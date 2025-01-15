@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.compositionLocalTheme.data
+package com.alexeyyuditsky.learning.compositionLocal.data
 
 import androidx.compose.ui.graphics.Color
 

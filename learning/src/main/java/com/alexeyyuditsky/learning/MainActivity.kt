@@ -9,8 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.alexeyyuditsky.learning.compositionLocalTheme.AppThemeContainer
-import com.alexeyyuditsky.learning.compositionLocalTheme.ui.CompositionLocalTheme
+import com.alexeyyuditsky.learning.constraint.example1.Example1
 
 class MainActivity : ComponentActivity() {
 
@@ -20,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 Box(modifier = Modifier.padding(innerPadding)) {
-                    AppThemeContainer { CompositionLocalTheme() }
+                    Example1()
                 }
             }
         }

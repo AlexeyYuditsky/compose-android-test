@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.compositionLocalTheme
+package com.alexeyyuditsky.learning.compositionLocal
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -8,9 +8,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.alexeyyuditsky.learning.compositionLocalTheme.controller.AppThemeController
-import com.alexeyyuditsky.learning.compositionLocalTheme.data.AppTheme
-import com.alexeyyuditsky.learning.compositionLocalTheme.data.ThemeDataSource
+import com.alexeyyuditsky.learning.compositionLocal.controller.AppThemeController
+import com.alexeyyuditsky.learning.compositionLocal.data.AppTheme
+import com.alexeyyuditsky.learning.compositionLocal.data.ThemeDataSource
 
 val LocalAppTheme = compositionLocalOf { AppTheme.Light }
 val LocalAppThemeController =

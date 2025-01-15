@@ -1,7 +1,7 @@
-package com.alexeyyuditsky.learning.compositionLocalTheme.controller
+package com.alexeyyuditsky.learning.compositionLocal.controller
 
-import com.alexeyyuditsky.learning.compositionLocalTheme.data.AppTheme
-import com.alexeyyuditsky.learning.compositionLocalTheme.data.ThemeDataSource
+import com.alexeyyuditsky.learning.compositionLocal.data.AppTheme
+import com.alexeyyuditsky.learning.compositionLocal.data.ThemeDataSource
 
 interface AppThemeController {
 

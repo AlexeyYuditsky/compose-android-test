@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.coil)
     implementation(libs.coilNetwork)
     implementation(libs.javaFaker)
+    implementation(libs.constraint)
 
     testImplementation(libs.junit)
 

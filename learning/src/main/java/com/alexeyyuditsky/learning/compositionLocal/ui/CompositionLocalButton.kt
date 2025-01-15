@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.compositionLocalTheme.ui
+package com.alexeyyuditsky.learning.compositionLocal.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.alexeyyuditsky.learning.R
-import com.alexeyyuditsky.learning.compositionLocalTheme.LocalAppTheme
-import com.alexeyyuditsky.learning.compositionLocalTheme.LocalAppThemeController
+import com.alexeyyuditsky.learning.compositionLocal.LocalAppTheme
+import com.alexeyyuditsky.learning.compositionLocal.LocalAppThemeController
 
 @Preview(showSystemUi = true)
 @Composable
