@@ -1,4 +1,4 @@
-package com.alexeyyuditsky.learning.constraint.example1
+package com.alexeyyuditsky.learning.constraint.examples
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
