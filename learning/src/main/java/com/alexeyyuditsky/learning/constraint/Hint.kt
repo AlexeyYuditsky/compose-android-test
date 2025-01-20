@@ -18,7 +18,7 @@ fun ConstraintLayoutScope.Hint(
         fontSize = 13.sp,
         modifier = Modifier.constrainAs(createRef()) {
             centerHorizontallyTo(id)
-            bottom.linkTo(anchor = id.top, margin = 2.dp)
+            bottom.linkTo(id.top, margin = 2.dp)
         }
     )
 }

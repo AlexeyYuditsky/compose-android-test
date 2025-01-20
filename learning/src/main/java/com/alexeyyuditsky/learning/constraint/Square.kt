@@ -23,9 +23,9 @@ fun Square(
 @Composable
 fun Rectangle(
     modifier: Modifier,
-    width: Dp,
-    height: Dp,
-    color: Color
+    width: Dp = 100.dp,
+    height: Dp = 100.dp,
+    color: Color = Color.Red
 ) {
     Box(
         modifier.then(
