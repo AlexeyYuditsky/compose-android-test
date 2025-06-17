@@ -1,6 +1,5 @@
 package com.alexeyyuditsky.learning.constraint.examples
 
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -12,7 +11,7 @@ import com.alexeyyuditsky.learning.constraint.Square
 @Preview(showSystemUi = true)
 @Composable
 fun Example6() {
-    ConstraintLayout(modifier = Modifier.fillMaxSize()) {
+    ConstraintLayout {
         Square(
             modifier = Modifier
                 .padding(start = 20.dp, top = 20.dp)

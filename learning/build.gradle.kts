@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.alexeyyuditsky.learning"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.alexeyyuditsky.learning"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 

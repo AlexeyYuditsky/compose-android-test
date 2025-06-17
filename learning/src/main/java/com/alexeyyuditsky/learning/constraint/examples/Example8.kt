@@ -14,9 +14,10 @@ import com.alexeyyuditsky.learning.constraint.Square
 @Composable
 fun Example8() {
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
-        val largeSquare = createRef()
-        val (innerLeftSquare, innerRightSquare, innerTopSquare, innerBottomSquare) = createRefs()
-        val (outerLeftSquare, outerRightSquare, outerTopSquare, outerBottomSquare) = createRefs()
+        val (
+            largeSquare, innerLeftSquare, innerRightSquare, innerTopSquare, innerBottomSquare,
+            outerLeftSquare, outerRightSquare, outerTopSquare, outerBottomSquare
+        ) = createRefs()
 
         Square(
             modifier = Modifier
