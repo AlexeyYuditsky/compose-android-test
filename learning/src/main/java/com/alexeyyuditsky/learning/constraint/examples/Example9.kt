@@ -1,6 +1,7 @@
 package com.alexeyyuditsky.learning.constraint.examples
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,7 +18,7 @@ import com.alexeyyuditsky.learning.constraint.Rectangle
 @Preview(showSystemUi = true)
 @Composable
 fun Example9() {
-    ConstraintLayout {
+    ConstraintLayout(modifier = Modifier.fillMaxSize()) {
         val (
             startBound, endBound, rectFillToConstraint, rectMatchParent, rectPercentage,
             rectWrapContent, rectPrefWrapContent, rectPreferredValue, prefAspectRatio
